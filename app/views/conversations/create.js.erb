@@ -3,6 +3,7 @@ var conversation = conversations.find("[data-conversation-id='" + "<%= @conversa
 
 if (conversation.length !== 1) {
   conversations.append("<%= j(render 'conversations/conversation', conversation: @conversation, user: current_user) %>");
+
   conversation = conversations.find("[data-conversation-id='" + "<%= @conversation.id %>" + "']");
 }
 
